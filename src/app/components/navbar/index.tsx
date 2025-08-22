@@ -44,27 +44,22 @@ export const Navbar = () => {
 
     return (
 
-        <Container>
+        <Container >
             <motion.nav 
             style={{
                 boxShadow: scrolled ? "var(--shadow-siddhant)" : "none",
-                width: scrolled ? "40%" : "100%",
+                width: scrolled ? "50%" : "100%",
                 y: scrolled ? 10 : 0,
             }}
             transition={{
-                duration: 0.5,
+                duration: 0.3,
                 ease: "easeInOut",
             }}
-            className="flex items-center justify-between px-4 py-2 fixed inset-x-0 mx-auto top-0 max-w-4xl z-50 rounded-full">
+            className="flex items-center justify-between px-3 py-2 fixed inset-x-0 mx-auto top-0 max-w-4xl z-50 rounded-full bg-white opacity-95 ">
                 <Link href="/">
-                <Image
-                    src="/Avatar.jpg"
-                    alt="Avatar"
-                    className="w-15 rounded-full"
-                    width="50"
-                    height="50"
-                    />
-                </Link>
+                <div className="hover:bg-neutral-100 px-2 py-1 rounded-md">
+                Home
+                </div></Link>
                 <div className="flex items-center ">
                     {
                         navItems.map((item, idx) => (
