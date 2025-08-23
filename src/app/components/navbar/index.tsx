@@ -55,7 +55,7 @@ export const Navbar = () => {
                 duration: 0.3,
                 ease: "easeInOut",
             }}
-            className="flex items-center justify-between px-3 py-2 fixed inset-x-0 mx-auto top-0 max-w-4xl z-50 rounded-full bg-white opacity-95 ">
+            className="flex items-center justify-between px-3 py-2 fixed inset-x-0 mx-auto top-0 max-w-4xl z-50 rounded-full bg-white  ">
                 <Link href="/">
                 <div className="hover:bg-neutral-100 px-2 py-1 rounded-md">
                 Home
