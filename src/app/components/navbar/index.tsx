@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link";
 import { Container } from "../Container"
-import { motion, number, useMotionValueEvent, useScroll, useTransform } from "framer-motion"
+import { motion, number, useMotionTemplate, useMotionValueEvent, useScroll, useTransform } from "framer-motion"
 import Image from "next/image";
 
 import { useState } from "react";
@@ -15,7 +15,10 @@ export const Navbar = () => {
     const [scrolled , setScrolled] = useState<boolean>(false)
 
     const y = useTransform(scrollY, [0, 100], [0, 10])
-    const width = useTransform(scrollY, [0, 100], ["50%", "40%"])
+    const width = useTransform(scrollY, [0, 100], ["100%", "50%"])
+    const opacity = useTransform(scrollY, [0, 100], [1, 0.8])
+
+    const filter = useMotionTemplate`blur(${useTransform(scrollY,[0,100],[0,10])})`
 
     useMotionValueEvent(scrollY, "change", (latest) => {
         if(latest > 20){
@@ -53,13 +56,13 @@ export const Navbar = () => {
             style={{
                 boxShadow: scrolled ? "var(--shadow-siddhant)" : "none",
                 width,
-                y,
+                y,  
             }}
             transition={{
                 duration: 0.3,
                 ease: "easeInOut",
             }}
-            className="flex items-center justify-between px-3 py-2 fixed inset-x-0 mx-auto top-0 max-w-4xl z-50 rounded-full bg-white  ">
+            className="flex items-center justify-between px-3 py-3 fixed inset-x-0 mx-auto top-0 max-w-4xl z-50 rounded-full bg-white  ">
                 <Link href="/">
                 <div className="hover:bg-neutral-100 px-2 py-1 rounded-md">
                 Home
