@@ -17,7 +17,7 @@ export const LandingBlogs = async () => {
 
   return (
     <div className='p-6 mt-20' >
-        <h2 className='text-2xl md:text-2xl font-semibold text-secondary mb-10'>Explore Blogs :</h2>
+        <h2 className='text-2xl md:text-2xl font-semibold text-primary mb-10'>Explore Blogs :</h2>
     <div className="flex items-start justify-start pt-3">
         
       <Container className="md:pb-5">

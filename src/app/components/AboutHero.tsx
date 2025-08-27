@@ -13,8 +13,8 @@ export const AboutHero = () => {
           
           {/* Add more content sections here as needed */}
           <div className="prose prose-lg max-w-none">
-            <p className="text-secondary leading-relaxed">
-            I specialize in Frontend Development, creating modern and responsive web applications using React, Next.js, Tailwind CSS, and other cutting-edge technologies. I help businesses and individuals build high-performance digital solutions tailored to their goals, ensuring clean code, seamless user experiences, and optimal performance.
+            <p className="text-secondary text-md leading-relaxed">
+            I specialize in <span className="text-primary">Frontend Development</span>, creating modern and responsive web applications using React, Next.js, Tailwind CSS, and other cutting-edge technologies. I help businesses and individuals build high-performance digital solutions tailored to their goals, ensuring clean code, seamless user experiences, and optimal performance.
             </p>
           </div>
         </div>
