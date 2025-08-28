@@ -1,5 +1,5 @@
 "use client"
-import Link from "next/link";
+import { Link } from 'next-view-transitions'
 import { Container } from "../Container"
 import { motion, number, useMotionTemplate, useMotionValueEvent, useScroll, useTransform } from "framer-motion"
 import Image from "next/image";

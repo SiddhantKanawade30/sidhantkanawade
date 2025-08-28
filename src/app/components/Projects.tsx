@@ -2,6 +2,8 @@
 import { motion } from "motion/react"
 import Image from "next/image"
 import Link from "next/link"
+import { Container } from "./Container"
+
 
 
 
@@ -36,7 +38,8 @@ export const Projects = () => {
 
 
     return (
-        <div className="pt-10">
+        <Container>
+        <div className="pt-10 max-w-6xl mx-auto">
             <p className="text-secondary text-sm max-w-lg pt-4 text-sm md:text-base pl-2">Love building products that impact people's lives</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-2 mt-3"> 
                 {
@@ -67,5 +70,6 @@ export const Projects = () => {
 
             </div>
         </div>
+        </Container>
     )
 }
