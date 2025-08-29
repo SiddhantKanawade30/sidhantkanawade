@@ -26,7 +26,7 @@ const links = [
 
     return (
         <Container >
-            <div className="flex justify-between py-4 border-t border-neutral-200 text-base text-secondary hover:text-primary transition-colors px-4">
+            <div className="flex justify-between   text-base text-secondary hover:text-primary transition-colors px-2">
                 <div className="cursor-pointer">
                     Made with love by Siddhant A Kanawade
                 </div>
