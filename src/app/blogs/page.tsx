@@ -2,6 +2,8 @@ import { Container } from "../components/Container";
 import { Metadata } from "next";
 import { getBlogs } from "@/utils/mdx";
 import { Link } from 'next-view-transitions'
+import { Title } from "../components/ui/Title";
+import { Subtitle } from "../components/ui/Subtitle";
 
 
 export const metadata: Metadata = {
@@ -22,15 +24,15 @@ export default async function BlogsPage() {
 
   return (
     <div className="min-h-screen flex items-start justify-start">
-      <Container className="min-h-screen p-6 md:pt-24 md:pb-16">
+      <Container className="min-h-screen p-6 md:pt-20 md:pb-16">
         {/* Header Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-2xl md:text-4xl font-bold text-primary mb-6">
+        <div className="mb-16">
+          <Title>
             My Blogs
-          </h2>
-          <p className="text-secondary max-w-2xl mx-auto leading-relaxed">
+          </Title>
+          <Subtitle>
             Sharing insights, experiences, and learnings from my journey in technology and development.
-          </p>
+          </Subtitle>
         </div>
 
         {/* Blog List */}
