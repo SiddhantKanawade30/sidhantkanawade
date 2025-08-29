@@ -9,7 +9,13 @@ export const ProjectsHero = () => {
         <div className="max-w-6xl mx-auto">
           <Title>Projects</Title>
           <Subtitle>
-            I am a software engineer with a passion for building innovative products that help people live better lives and give me motivation to keep learning and growing.
+            
+          I enjoy building projects that challenge my problem-solving skills and push me to write cleaner, smarter, and more efficient code every day.
+         
+          <br />
+          
+          Every project I build is a step forward in my coding journey, helping me explore new tools, frameworks, and creative ways to solve real-world problems.
+          
           </Subtitle>
           
           

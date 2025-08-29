@@ -39,7 +39,7 @@ export const Projects = () => {
 
     return (
         <Container>
-        <div className="pt-10 max-w-6xl mx-auto">
+        <div className="pt-5 -mx-4 px-4 border-b border-neutral-200 pb-10 ">
             <p className="text-secondary text-sm max-w-lg pt-4 text-sm md:text-base pl-2">Love building products that impact people's lives</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-2 mt-3"> 
                 {

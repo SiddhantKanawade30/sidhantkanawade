@@ -8,12 +8,12 @@ export default function Home() {
   return (
     <div className="min-h-screen flex items-start justify-start">
       
-      <Container className="min-h-[200vh]  md:pt-25 md:pb-10">
+      <Container className="min-h-[200vh] px-0 py-4 md:pt-25 md:pb-10">
         <Hero />
-        {/* <Current /> */}
+       
         <Projects />
         <LandingBlogs />
       </Container>
     </div>
   );
-}
+} 

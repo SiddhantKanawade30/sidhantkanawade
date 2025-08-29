@@ -1,11 +1,12 @@
 import { ContactHero } from "../components/ContactHero";
-import { Projects } from "../components/Projects";
+import { Form } from "../components/Form";
 
 export default function Contact() {
   return (
     <div >
             <ContactHero />
-            <Projects />
+            <Form />
+           
     </div>
   );
 }

@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export const Hero = () => {
     return(
-        <div className="flex pb-10 border-b border-neutral-200">
+        <div className="flex md:pb-10 border-b border-neutral-200 md:pt-5 p-4" >
         <Image src="/Avatar.jpg" alt="Avatar" className="w-40 p-2 rounded-2xl" width={150} height={150} />
         <div className="md:pl-3 md:pt-10">
         <h1 className="text-2xl md:text-4xl font-bold tracking-tight text-primary ">Siddhant Kanawade</h1>

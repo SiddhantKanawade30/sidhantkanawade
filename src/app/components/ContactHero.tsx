@@ -9,15 +9,20 @@ export const ContactHero = () => {
         <div className="max-w-6xl mx-auto">
           <Title>Contact Me</Title>
           <Subtitle>
-            I am open to freelancing offers. Reach out to me to enquire more about my work and services.   
+            I am open to freelancing offers. Reach out to me to enquire more about my work and services.    
+            <br />
+            <br />
+            Ways to contact me:
+            <br />
+            -Book a call with me at : <a href="https://calendly.com/kanawadesiddhant30/30min" className="text-primary text-base tracking-tight">Click here to book a call   </a>
+            <br />
+            -Mail me at <a href="mailto:kanawadesiddhant30@gmail.com" className="text-primary text-base tracking-tight">kanawadesiddhant30@gmail.com</a>
+            <br />
+            -Else fill the form below and i'll get back to you as soon as possible.
+            
           </Subtitle>
           
-          {/* Add more content sections here as needed */}
-          <div className="prose prose-lg max-w-none">
-            <p className="text-secondary text-md leading-relaxed">
-            I specialize in <span className="text-primary">Frontend Development</span>, creating modern and responsive web applications using React, Next.js, Tailwind CSS, and other cutting-edge technologies. I help businesses and individuals build high-performance digital solutions tailored to their goals, ensuring clean code, seamless user experiences, and optimal performance.
-            </p>
-          </div>
+          
         </div>
       </Container>  
     )

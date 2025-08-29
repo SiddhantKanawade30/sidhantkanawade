@@ -1,0 +1,43 @@
+"use client"
+import { Container } from "./Container";
+import { Toaster, toast } from 'sonner';
+
+
+export const Form = () => {
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        toast.success("Message sent successfully", {
+            description: "I will get back to you as soon as possible",
+        });
+    }
+
+
+
+
+    return (
+        <>
+        <Toaster />
+        <Container className="md:pb-10 px-7 -mt-10">
+        <div className="max-w-2xl mx-auto shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)]  rounded-lg p-4">
+          
+         <form onSubmit={handleSubmit}>
+            <div className="flex flex-col gap-4">
+
+                <label htmlFor="name" className="text-tertiary text-base">Full Name</label>
+                <input type="text" placeholder="Name" className="border border-neutral-300 rounded-md p-2" />
+
+                <label htmlFor="email" className="text-tertiary text-base pt-4">Email</label>
+                <input type="email" placeholder="Email" className="border border-neutral-300 rounded-md p-2" />
+
+                <label htmlFor="message" className="text-tertiary text-base pt-4">Message</label>
+                <textarea placeholder="Message" className="border border-neutral-300 rounded-md p-2 h-30" />
+
+                <button type="submit" className="bg-primary text-white rounded-md p-2 hover:bg-primary/80 transition-all duration-200 cursor-pointer">Submit</button>
+            </div>
+         </form>
+        </div>
+      </Container>  
+      </>
+    )
+}
