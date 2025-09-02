@@ -3,6 +3,7 @@ import { Link } from 'next-view-transitions'
 import { getBlogs } from "@/utils/mdx";
 import { Container } from './Container';
 import { div } from 'motion/react-client';
+import { Badge } from './ui/Badge';
 
 export const LandingBlogs = async () => {
     const allBlogs = await getBlogs()
@@ -16,11 +17,13 @@ export const LandingBlogs = async () => {
   };
 
   return (
-    <div className='p-6 pt-10 border-b border-neutral-200' >
-        <h2 className='text-2xl md:text-2xl font-semibold text-primary mb-10'>Explore Blogs :</h2>
+    <div className='p-2 pt-5 pb-10 ' >
+      <div className='px-2'>
+        <Badge  >I love Sharing things</Badge>
+        </div>
     <div className="flex items-start justify-start pt-3">
         
-      <Container className="md:pb-5">
+      <Container >
         {/* Blog List */}
         {allBlogs.length === 0 ? (
           <div className="text-center ">
@@ -40,12 +43,12 @@ export const LandingBlogs = async () => {
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                     {/* Left Side - Title and Description */}
                     <div className="flex-1 min-w-0">
-                      <h2 className="text-xl md:text-2xl font-bold text-primary mb-3 group-hover:text-tertiary transition-colors">
+                      <h2 className="text-xl md:text-lg font-bold text-primary mb-3 group-hover:text-tertiary transition-colors">
                         {blog.title}
                       </h2>
                       
                       {blog.description && (
-                        <p className="text-secondary leading-relaxed line-clamp-3">
+                        <p className="text-secondary text-sm leading-relaxed line-clamp-3">
                           {blog.description}
                         </p>
                       )}
