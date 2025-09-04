@@ -23,7 +23,7 @@ export default async function BlogsPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-start justify-start">
+    <div className="min-h-screen  flex items-start justify-start">
       <Container className="min-h-screen p-6 md:pt-20 md:pb-16">
         {/* Header Section */}
         <div className="mb-16">
@@ -50,16 +50,16 @@ export default async function BlogsPage() {
                 key={blog.slug} 
                 className="block group"
               >
-                <article className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 hover:shadow-md hover:border-primary dark:hover:border-primary transition-all duration-200">
+                <article className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 hover:shadow-md  dark:hover:border-gray-300 transition-all duration-200">
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                     {/* Left Side - Title and Description */}
                     <div className="flex-1 min-w-0">
-                      <h2 className="text-xl md:text-2xl font-bold text-primary mb-3 group-hover:text-tertiary transition-colors line-clamp-2">
+                      <h2 className="text-xl md:text-xl  font-bold text-primary mb-3 group-hover:text-tertiary transition-colors line-clamp-2">
                         {blog.title}
                       </h2>
                       
                       {blog.description && (
-                        <p className="text-secondary leading-relaxed line-clamp-3">
+                        <p className="text-secondary text-sm leading-relaxed line-clamp-3">
                           {blog.description}
                         </p>
                       )}
@@ -81,7 +81,7 @@ export default async function BlogsPage() {
         )}
 
         {/* Footer Section */}
-        <div className="text-center mt-16 pt-8 border-t border-gray-200 dark:border-gray-700">
+        <div className="text-center mt-16 pt-8  dark:border-gray-700">
           <p className="text-secondary">
             Have a question or want to discuss any of these topics? 
             <Link href="/contact" className="text-primary hover:text-tertiary transition-colors ml-1">

@@ -6,7 +6,7 @@ import { WorkCard } from "./ui/WorkCard"
 export const Experience = () => {
     return (
         <div>
-            <Container className="p-4 md:pt-10 md:pb-10 px-7 border-b border-neutral-200">
+            <Container className="p-4 md:pt-10 md:pb-10 px-7 inset   border-2 border-neutral-100">
                 <div className="max-w-6xl mx-auto">
                     <Title>Experience</Title>
                     <WorkCard

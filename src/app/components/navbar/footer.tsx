@@ -26,7 +26,7 @@ const links = [
 
     return (
         <Container >
-            <div className="flex justify-between border-t border-neutral-200 pt-4 dark:border-neutral-800 -mx-4  text-secondary hover:text-primary transition-colors px-5">
+            <div className="flex justify-between border-t-2 border-neutral-100 pt-4 dark:border-neutral-800 -mx-4  text-secondary hover:text-primary transition-colors px-5">
                 <div className="cursor-pointer text-sm">
                     Made with love by Siddhant A Kanawade
                 </div>

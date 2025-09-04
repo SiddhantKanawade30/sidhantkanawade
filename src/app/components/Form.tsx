@@ -29,8 +29,8 @@ export const Form = () => {
     return (
         <>
         <Toaster />
-        <Container className="md:pb-10 px-7 -mt-10 border-b border-neutral-200">
-        <div className="max-w-2xl mx-auto shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)]  rounded-lg p-4">
+        <Container className="md:pb-10 px-7 -mt-10 ">
+        <div className="max-w-2xl mx-auto shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]   rounded-lg p-4">
           
          <form onSubmit={handleSubmit}>
             <div className="flex flex-col gap-4">

@@ -5,7 +5,7 @@ import { Subtitle } from "./ui/Subtitle"
 
 export const AboutHero = () => {
     return (
-        <Container className=" p-4 md:pt-20 md:pb-10 px-7 border-b border-neutral-200">
+        <Container className=" p-4 md:pt-20 md:pb-10 px-7 ">
         <div className="max-w-6xl mx-auto">
           <Title>About Me</Title>
           <Subtitle>
