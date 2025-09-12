@@ -1,10 +1,8 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { InfiniteMovingCards } from "./ui/Infinite-moving-cards";
 import { Badge } from "./ui/Badge";
-import { div } from "motion/react-client";
-import { Input } from "./ui/Input";
 import { HeroContact } from "./HeroContact";
 
 export function Testimonials() {

@@ -40,7 +40,7 @@ export default async function BlogsPage() {
           <div className="text-center py-16">
             <div className="text-6xl mb-4">📝</div>
             <h3 className="text-2xl font-semibold text-primary mb-2">No posts yet</h3>
-            <p className="text-secondary">I'm working on some great content. Check back soon!</p>
+            <p className="text-secondary">I&apos;m working on some great content. Check back soon!</p>
           </div>
         ) : (
           <div className="space-y-6">
@@ -85,7 +85,7 @@ export default async function BlogsPage() {
           <p className="text-secondary">
             Have a question or want to discuss any of these topics? 
             <Link href="/contact" className="text-primary hover:text-tertiary transition-colors ml-1">
-              Let's connect!
+              Let&apos;s connect!
             </Link>
           </p>
         </div>

@@ -1,5 +1,4 @@
 import { Container } from "./Container"
-import Image from "next/image"
 
 
 

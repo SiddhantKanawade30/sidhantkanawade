@@ -2,7 +2,6 @@
 import { Link } from 'next-view-transitions'
 import { getBlogs } from "@/utils/mdx";
 import { Container } from './Container';
-import { div } from 'motion/react-client';
 import { Badge } from './ui/Badge';
 
 export const LandingBlogs = async () => {
@@ -29,7 +28,7 @@ export const LandingBlogs = async () => {
           <div className="text-center ">
             <div className="text-6xl mb-4">📝</div>
             <h3 className="text-2xl font-semibold text-primary mb-2">No posts yet</h3>
-            <p className="text-secondary">I'm working on some great content. Check back soon!</p>
+            <p className="text-secondary">I&apos;m working on some great content. Check back soon!</p>
           </div>
         ) : (
           <div className="space-y-6">

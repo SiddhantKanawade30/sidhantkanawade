@@ -1,4 +1,3 @@
-import { Container } from "../components/Container";
 import { AboutHero } from "../components/AboutHero";
 import { Experience } from "../components/Experience";
 import { Qualification } from "../components/Qualification";
@@ -8,7 +7,7 @@ export default function About() {
     <div >
       <AboutHero />
       <Experience />
-      <Qualification />
+      <Qualification /> 
     </div>
   );
 }

@@ -1,8 +1,7 @@
 "use client"
 import { Link } from 'next-view-transitions'
 import { Container } from "../Container"
-import { motion, number, useMotionTemplate, useMotionValueEvent, useScroll, useTransform } from "framer-motion"
-import Image from "next/image";
+import { motion, useMotionValueEvent, useScroll, useTransform } from "framer-motion"
 
 import { useState } from "react";
 
@@ -16,9 +15,9 @@ export const Navbar = () => {
 
     const y = useTransform(scrollY, [0, 100], [0, 10])
     const width = useTransform(scrollY, [0, 100], ["100%", "50%"])
-    const opacity = useTransform(scrollY, [0, 100], [1, 0.8])
+    // const opacity = useTransform(scrollY, [0, 100], [1, 0.8])
 
-    const filter = useMotionTemplate`blur(${useTransform(scrollY,[0,100],[0,10])})`
+    // const filter = useMotionTemplate`blur(${useTransform(scrollY,[0,100],[0,10])})`
 
     useMotionValueEvent(scrollY, "change", (latest) => {
         if(latest > 20){

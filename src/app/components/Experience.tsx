@@ -1,4 +1,3 @@
-import { div } from "motion/react-client"
 import { Container } from "./Container"
 import { Title } from "./ui/Title"
 import { WorkCard } from "./ui/WorkCard"

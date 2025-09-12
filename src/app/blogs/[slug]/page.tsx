@@ -29,7 +29,7 @@ export default async function SingleBlogPage({ params }: { params: Promise<{ slu
       redirect("/blogs")
     }
 
-    const {content,frontmatter} = blog;
+    const {content} = blog;
 
     return (
       
