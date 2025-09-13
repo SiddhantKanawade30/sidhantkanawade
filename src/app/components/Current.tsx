@@ -10,7 +10,7 @@ export const Current = () => {
                 <div className="border rounded-2xl shadow-md border-neutral-200">
                     <div className="p-3 flex">
                         <div className="bg-quaternary rounded-md">
-                        <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        <svg className="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                             width="24"
                             height="24"
                             fill="none"

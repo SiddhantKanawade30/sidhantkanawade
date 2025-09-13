@@ -12,10 +12,7 @@
   --color-quaternary : var(--color-neutral-100);
 }
 
-.dark {
-  --color-primary : var(--color-neutral-100);
-  --color-secondary : var(--color-neutral-400);
-}
+/* Dark mode removed - keeping only light theme */
 
 @theme inline {
   --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;

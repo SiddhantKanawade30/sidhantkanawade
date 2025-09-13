@@ -50,7 +50,7 @@ export default async function BlogsPage() {
                 key={blog.slug} 
                 className="block group"
               >
-                <article className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-4 md:p-6 hover:shadow-md dark:hover:border-gray-300 transition-all duration-200">
+                <article className="bg-white rounded-lg border border-gray-200 p-4 md:p-6 hover:shadow-md transition-all duration-200">
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 md:gap-4">
                     {/* Left Side - Title and Description */}
                     <div className="flex-1 min-w-0">
@@ -81,7 +81,7 @@ export default async function BlogsPage() {
         )}
 
         {/* Footer Section */}
-        <div className="text-center mt-8 md:mt-16 pt-4 md:pt-8 dark:border-gray-700">
+        <div className="text-center mt-8 md:mt-16 pt-4 md:pt-8">
           <p className="text-secondary text-sm md:text-base">
             Have a question or want to discuss any of these topics? 
             <Link href="/contact" className="text-primary hover:text-tertiary transition-colors ml-1">

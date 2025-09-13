@@ -38,7 +38,7 @@ export const LandingBlogs = async () => {
                 key={blog.slug} 
                 className="block group"
               >
-                <article className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-4 md:p-6 hover:shadow-md dark:hover:border-primary hover:shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] transition-all duration-200">
+                <article className="bg-white rounded-lg border border-gray-200 p-4 md:p-6 hover:shadow-md hover:shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] transition-all duration-200">
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 md:gap-4">
                     {/* Left Side - Title and Description */}
                     <div className="flex-1 min-w-0">

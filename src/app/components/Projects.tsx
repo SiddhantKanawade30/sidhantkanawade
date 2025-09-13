@@ -64,7 +64,7 @@ export const Projects = () => {
                             />
                             </div>
 
-                            <h2 className="text-tertiary dark:text-white text-lg font-bold mt-2 pl-2 tracking-tight">
+                            <h2 className="text-tertiary text-lg font-bold mt-2 pl-2 tracking-tight">
                                 {project.title}
                             </h2>
                             <p className="text-secondary text-sm pt-2 pb-5 pl-2 tracking-tight leading-relaxed">
