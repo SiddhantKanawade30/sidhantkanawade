@@ -80,10 +80,10 @@ export const Projects = () => {
                                 - A secure password manager using cryptography, helping users store and manage their passwords securely.
                             </p>
                             <p className="text-sm md:text-md text-secondary leading-relaxed">
-                                - The system uses Socket.IO for real-time communication while encrypting both message content and metadata to prevent traffic analysis.
+                                - Built using Mern stack , for encryption of passwords, secure vault uses cryptojs library.
                             </p>
                             <p className="text-sm md:text-md text-secondary py-1 leading-relaxed">
-                                - The messages are encrypted by sender&apos;s private key, receiver&apos;s public key, and a random string of characters which is different in every message.
+                                - This is my first MERN stack stack project, got indepth of how does encryption works .
                             </p>
                         </div>
                     </div>
