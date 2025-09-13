@@ -7,7 +7,7 @@ import { HeroContact } from "./HeroContact";
 
 export function Testimonials() {
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto pb-30 md:pb-0">
         <div className="px-4 py-5">
         <Badge>People Love Working With Me</Badge>
         </div>

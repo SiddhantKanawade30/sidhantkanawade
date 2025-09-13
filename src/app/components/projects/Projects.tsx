@@ -53,7 +53,7 @@ export const Projects = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-[2.5fr_4fr] gap-4 md:gap-8 pt-10">
                         {/* Image container */}
-                        <div className="w-full h-48 md:w-[350px] md:h-[250px] rounded-lg overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] relative order-2 md:order-1">
+                        <div className="w-full h-48 md:w-[350px] md:h-[210px] rounded-lg overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] relative order-2 md:order-1">
                             <Image
                                 src={SecureVault}
                                 alt="Project Image"

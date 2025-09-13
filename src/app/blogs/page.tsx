@@ -24,7 +24,7 @@ export default async function BlogsPage() {
 
   return (
     <div className="min-h-screen flex items-start justify-start overflow-x-auto">
-      <Container className="min-h-screen p-4 md:p-6 md:pt-20 md:pb-16">
+      <Container className="min-h-screen p-4 pt-14 md:p-6 md:pt-20 md:pb-16">
         {/* Header Section */}
         <div className="mb-8 md:mb-16">
           <Title>
