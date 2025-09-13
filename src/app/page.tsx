@@ -8,9 +8,9 @@ import { Testimonials } from "./components/Testimonials";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex items-start justify-start">
+    <div className="min-h-screen flex items-start justify-start overflow-x-auto">
       
-      <Container className=" px-0 py-4 md:pt-25 md:pb-10">
+      <Container className="px-0 py-4 md:pt-25 md:pb-10 min-w-0">
         <Hero />
        
         <Projects />

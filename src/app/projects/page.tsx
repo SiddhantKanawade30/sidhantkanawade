@@ -5,7 +5,7 @@ import { Projects } from "../components/projects/Projects";
 
 export default function ProjectsPage() {
     return (
-      <div>
+      <div className="overflow-x-auto">
         <ProjectsHero />
         <Projects />
       </div>

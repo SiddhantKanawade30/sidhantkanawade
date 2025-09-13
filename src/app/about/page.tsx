@@ -4,7 +4,7 @@ import { Qualification } from "../components/Qualification";
 
 export default function About() {
   return (
-    <div >
+    <div className="overflow-x-auto">
       <AboutHero />
       <Experience />
       <Qualification /> 

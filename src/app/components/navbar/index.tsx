@@ -61,18 +61,18 @@ export const Navbar = () => {
                 duration: 0.3,
                 ease: "easeInOut",
             }}
-            className="flex items-center justify-between px-6 py-3 fixed inset-x-0 mx-auto top-0 max-w-4xl z-50 rounded-full bg-white  ">
+            className="flex items-center justify-between px-4 md:px-6 py-3 fixed inset-x-0 mx-auto top-0 max-w-4xl z-50 rounded-full bg-white overflow-x-auto">
                 <Link href="/">
-                <div className="hover:bg-neutral-100 px-2 py-1 rounded-md">
+                <div className="hover:bg-neutral-100 px-2 py-1 rounded-md flex-shrink-0">
                 Home
                 </div></Link>
-                <div className="flex items-center ">
+                <div className="flex items-center min-w-0">
                     {
                         navItems.map((item, idx) => (
                             <Link
                                 href={item.href}
                                 key={idx}
-                                className="relative px-2 py-1 text-sm"
+                                className="relative px-1 md:px-2 py-1 text-xs md:text-sm flex-shrink-0"
                                 onMouseEnter={() => setHovered(idx)}
                                 onMouseLeave={() => setHovered(null)}
                             >

@@ -29,12 +29,12 @@ export const HeroWork = () => {
 
     return (
         <Container>
-        <div className="pt-5 -mx-4 px-4  border-2 border-neutral-100 pb-15  ">
+        <div className="pt-5 -mx-4 px-4 border-2 border-neutral-100 pb-15 overflow-x-auto">
         <div className="py-5">
             <Badge>My Experience</Badge>
             </div>
            
-            <div className="">
+            <div className="min-w-0">
                {work.map((work, index) => (
                 <HeroWorkCard key={index} title={work.title} Role={work.Role} date={work.date} description={work.description} image={work.image} />
                ))} 

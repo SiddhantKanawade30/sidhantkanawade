@@ -7,11 +7,11 @@ import { HeroContact } from "./HeroContact";
 
 export function Testimonials() {
   return (
-    <div >
+    <div className="overflow-x-auto">
         <div className="px-4 py-5">
         <Badge>People Love Working With Me</Badge>
         </div>
-    <div className=" rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+    <div className="rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden min-w-0">
         
       <InfiniteMovingCards
         items={testimonials}

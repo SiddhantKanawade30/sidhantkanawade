@@ -32,13 +32,13 @@ export default async function SingleBlogPage({ params }: { params: Promise<{ slu
     const {content} = blog;
 
     return (
-      
-        <Container className="min-h-screen  md:pt-20 md:pb-10">
-            <article className="blog-content">
+      <div className="overflow-x-auto">
+        <Container className="min-h-screen p-4 md:p-6 md:pt-20 md:pb-10">
+            <article className="blog-content prose prose-sm md:prose-base max-w-none min-w-0">
              {content}
             </article>
         </Container>
-      
+      </div>
     );
   
 }

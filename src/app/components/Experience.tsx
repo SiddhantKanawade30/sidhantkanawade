@@ -4,9 +4,9 @@ import { WorkCard } from "./ui/WorkCard"
 
 export const Experience = () => {
     return (
-        <div>
-            <Container className="p-4 md:pt-10 md:pb-10 px-7 inset   border-2 border-neutral-100">
-                <div className="max-w-6xl mx-auto">
+        <div className="overflow-x-auto">
+            <Container className="p-4 md:pt-10 md:pb-10 px-4 md:px-7 inset border-2 border-neutral-100">
+                <div className="max-w-6xl mx-auto min-w-0">
                     <Title>Experience</Title>
                     <WorkCard
                         image="/codence_studio.webp"
