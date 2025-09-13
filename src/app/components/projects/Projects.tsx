@@ -77,7 +77,7 @@ export const Projects = () => {
                                 - The system uses Socket.IO for real-time communication while encrypting both message content and metadata to prevent traffic analysis.
                             </p>
                             <p className="text-sm md:text-md text-secondary py-1 leading-relaxed">
-                                - The messages are encrypted by sender's private key, receiver's public key, and a random string of characters which is different in every message.
+                                - The messages are encrypted by sender&apos;s private key, receiver&apos;s public key, and a random string of characters which is different in every message.
                             </p>
                         </div>
                     </div>
