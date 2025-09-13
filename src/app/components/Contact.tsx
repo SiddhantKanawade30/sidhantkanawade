@@ -18,7 +18,7 @@ export const ContactHero = () => {
             <br />
             -Mail me at <a href="mailto:kanawadesiddhant30@gmail.com" className="text-primary text-sm md:text-base tracking-tight break-words">kanawadesiddhant30@gmail.com</a>
             <br />
-            -Else fill the form below and i&apos;ll get back to you as soon as possible.
+            -Else fill the form below and i&apos;ll get back to you as soon as possible.(Currently not working how ever you can use the link Above)
             
           </Subtitle> 
           

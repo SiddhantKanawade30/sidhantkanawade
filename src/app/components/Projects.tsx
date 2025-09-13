@@ -45,7 +45,6 @@ export const Projects = () => {
             <div className="pl-7 md:pl-0 grid grid-cols-1 items-center md:grid-cols-3 gap-5 p-2 mt-3 min-w-0"> 
                 {
                     projects.map((project, idx) => (
-                        <Link href={project.href} key={project.title}>
                         <motion.div
                             initial={{ opacity: 0, filter: "blur(10px)" , y:10 }}
                             whileInView={{ opacity: 1, filter: "blur(0px)" , y:0 }}
@@ -55,24 +54,35 @@ export const Projects = () => {
                                 transition={{ duration: 0.3, ease : "easeInOut" }}
                                 >
                                     <div className="md:h-38 border-1 border-neutral-200 rounded-xl overflow-hidden">
-                            <Image
-                                src={project.src}
-                                alt={project.title}
-                                className="rounded-xl object-cover hover:scale-[1.01] transition duration-200 w-full h-full"
-                                width={400}
-                                height={400}
-                            />
-                            </div>
+                                        {project.href ? (
+                                            <Link href={project.href} target="_blank" rel="noopener noreferrer">
+                                                <Image
+                                                    src={project.src}
+                                                    alt={project.title}
+                                                    className="rounded-xl object-cover hover:scale-[1.01] transition duration-200 w-full h-full cursor-pointer"
+                                                    width={400}
+                                                    height={400}
+                                                />
+                                            </Link>
+                                        ) : (
+                                            <Image
+                                                src={project.src}
+                                                alt={project.title}
+                                                className="rounded-xl object-cover w-full h-full opacity-75"
+                                                width={400}
+                                                height={400}
+                                            />
+                                        )}
+                                    </div>
 
-                            <h2 className="text-tertiary text-lg font-bold mt-2 pl-2 tracking-tight">
-                                {project.title}
-                            </h2>
-                            <p className="text-secondary text-sm pt-2 pb-5 pl-2 tracking-tight leading-relaxed">
-                                {project.description}
-                            </p>
-                            </motion.div>
+                                    <h2 className="text-tertiary text-lg font-bold mt-2 pl-2 tracking-tight">
+                                        {project.title}
+                                    </h2>
+                                    <p className="text-secondary text-sm pt-2 pb-5 pl-2 tracking-tight leading-relaxed">
+                                        {project.description}
+                                    </p>
+                                </motion.div>
                         </motion.div> 
-                        </Link>
                     ))
                 }
 

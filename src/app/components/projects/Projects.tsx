@@ -1,6 +1,7 @@
 
 import { Container } from "../Container"
 import Image from "next/image"
+import Link from "next/link"
 import Blogito from "/public/Blogito.png"
 import SecureVault from "/public/securevault.png"
 import Phantom from "/public/phantom.svg"
@@ -17,7 +18,7 @@ export const Projects = () => {
                             <Image src={Phantom} alt="Project Image"
                                 width={500}
                                 height={500}
-                                className="w-full h-auto object-cover" />
+                                className="w-full h-auto object-cover opacity-75" />
                         </div>
 
                         <div className="order-1 md:order-2 min-w-0">
@@ -42,10 +43,12 @@ export const Projects = () => {
                             </div>
 
                         <div className="rounded-lg overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] pt-3 order-1 md:order-2">
-                            <Image src={Blogito} alt="Project Image"
-                                width={400}
-                                height={500}
-                                className="w-full h-auto object-cover" />
+                            <Link href="https://blogito.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                <Image src={Blogito} alt="Project Image"
+                                    width={400}
+                                    height={500}
+                                    className="w-full h-auto object-cover hover:scale-[1.02] transition duration-200 cursor-pointer" />
+                            </Link>
                         </div>
 
 
@@ -54,12 +57,14 @@ export const Projects = () => {
                     <div className="grid grid-cols-1 md:grid-cols-[2.5fr_4fr] gap-4 md:gap-8 pt-10">
                         {/* Image container */}
                         <div className="w-full h-48 md:w-[350px] md:h-[210px] rounded-lg overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] relative order-2 md:order-1">
-                            <Image
-                                src={SecureVault}
-                                alt="Project Image"
-                                fill
-                                className="object-cover"
-                            />
+                            <Link href="https://secure-vault-delta.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                <Image
+                                    src={SecureVault}
+                                    alt="Project Image"
+                                    fill
+                                    className="object-cover hover:scale-[1.02] transition duration-200 cursor-pointer"
+                                />
+                            </Link>
                         </div>
 
                         {/* Text section */}
