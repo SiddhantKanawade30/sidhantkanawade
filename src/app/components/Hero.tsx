@@ -7,7 +7,7 @@ export const Hero = () => {
         <div className="md:pl-3 md:pt-7 min-w-0 text-center md:text-left">
         <h1 className="text-2xl md:text-4xl font-bold tracking-tight text-primary">Siddhant A Kanawade</h1>
         <p className="text-sm text-secondary  md:text-base pt-4 pb-2 leading-relaxed">
-        Full-stack web developer specialized in JavaScript, working with React, Node.js, MongoDB, Tailwind, and TypeScript. I love solving problems and learning new technologies.
+        Full-stack web developer specialized in JavaScript, working with React, Node.js, MongoDB, Tailwind, and TypeScript. I thrive on solving problems and learning new technologies.
         </p>
         <span className="text-sm text-secondary md:text-sm mt-1 bg-neutral-100 py-1 px-2 rounded-lg inline-block">
           Software Engineer

@@ -9,7 +9,7 @@ export function Testimonials() {
   return (
     <div className="overflow-x-auto pb-30 md:pb-0">
         <div className="px-4 py-5">
-        <Badge>People Love Working With Me</Badge>
+        <Badge>User Feedbacks</Badge>
         </div>
     <div className="rounded-md flex flex-col antialiased bg-white items-center justify-center relative overflow-hidden min-w-0">
         

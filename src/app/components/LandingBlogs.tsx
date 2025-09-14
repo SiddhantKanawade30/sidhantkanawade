@@ -18,7 +18,7 @@ export const LandingBlogs = async () => {
   return (
     <div className='p-2 pt-5 pb-10 overflow-x-auto'>
       <div className='px-2'>
-        <Badge>I love Sharing things</Badge>
+        <Badge>Things I&apos;ve shared so far...</Badge>
         </div>
     <div className="flex items-start justify-start pt-3 min-w-0">
         

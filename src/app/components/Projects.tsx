@@ -6,7 +6,7 @@ import { Container } from "./Container"
 import { Badge } from "./ui/Badge"
 import Blogito from "/public/Blogito.png"
 import Phantom from "/public/phantom.svg"
-import SecureVault from "/public/securevault.png"
+import SecureVault from "/public/securevault.jpg"
 
 
 
@@ -40,9 +40,9 @@ export const Projects = () => {
         <Container>
         <div className="pt-5 -mx-4 px-4 border-2 border-neutral-100 pb-10 overflow-x-auto">
 
-            <Badge>I love Building things</Badge>
+            <Badge>I&apos;m fond of building things</Badge>
 
-            <div className="pl-7 md:pl-0 grid grid-cols-1 items-center md:grid-cols-3 gap-5 p-2 mt-3 min-w-0"> 
+            <div className="pl-5 md:pl-2 grid grid-cols-1 items-center md:grid-cols-3 gap-5 p-2 mt-3 min-w-0"> 
                 {
                     projects.map((project, idx) => (
                         <motion.div

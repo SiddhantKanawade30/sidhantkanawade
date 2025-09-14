@@ -15,7 +15,7 @@ export const Badge = ({ children }: { children: string }) => {
   <div className="absolute -right-1 -bottom-px h-1 w-1 animate-pulse rounded-full bg-neutral-200 z-10"></div>
 
   {/* Text */}
-  <span className="inline-block relative z-20 px-2 md:px-3 py-1 text-primary">{children}</span>
+  <span className="inline-block relative z-20 px-2 md:px-3 py-1 text-primary font-semibold">{children}</span>
 </h2>
 </div>
     )
