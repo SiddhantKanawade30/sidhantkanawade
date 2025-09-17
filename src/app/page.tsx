@@ -1,4 +1,5 @@
-//Siddhant Ankush Kanawade
+//Siddhant Ankush Kanawade 
+//kanawadesiddhant30@gmail.com
 import { Container } from "./components/Container";
 import { Projects } from "./components/Projects";
 import { Hero } from "./components/Hero";
