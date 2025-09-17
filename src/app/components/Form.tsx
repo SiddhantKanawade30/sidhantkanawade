@@ -2,28 +2,45 @@
 import { Container } from "./Container";
 import { Toaster, toast } from 'sonner';
 
+const FORM_URL = process.env.NEXT_PUBLIC_FORM_URL;
+if(!FORM_URL){
+    throw new Error("NEXT_PUBLIC_FORM_URL is not defined");
+}
 
 export const Form = () => {
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        const form = e.currentTarget;
-        const formData = new FormData(form);
-        const name = (formData.get('name') as string | null)?.trim() || "";
-        const email = (formData.get('email') as string | null)?.trim() || "";
-        const message = (formData.get('message') as string | null)?.trim() || "";
 
-        if(name === "" || email === "" || message === ""){
-            toast.error("Please fill all the fields", {
-                description: "All fields are required",
-            });
-            return;
-        }
-        toast.success("Message sent successfully", {
-            description: "I will get back to you as soon as possible",
+const handleSubmit = async(e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    
+    if (!form) {
+        toast.error("Form not found");
+        return;
+    }
+    
+    const formData = new FormData(form);
+
+    try {
+        const response = await fetch(FORM_URL, {
+            method: "POST",
+            body: formData,
+            headers: { Accept: "application/json" },
         });
+    
+        if (response.ok) {
+            toast.success("Message sent! ✅");
+        } else {
+            toast.error("Something went wrong ❌");
+        }
+    } catch (error) {
+        toast.error("Network error occurred ❌");
+        console.error("Form submission error:", error);
+    } finally {
+        // Always reset the form regardless of success or failure
         form.reset();
     }
+}
 
 
     return (

@@ -1,34 +1,47 @@
 import { Toaster, toast } from 'sonner';
 import { useState } from 'react';
 
-export const Input = ({label, placeholder, type, value, onChange, onSend}: {label: string, placeholder: string, type: string, value?: string, onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void, onSend?: () => void}) => {
+export const Input = ({label, placeholder, type, value, onChange}: {label: string, placeholder: string, type: string, value?: string, onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void}) => {
     const [inputValue, setInputValue] = useState(value || "");
+
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInputValue(e.target.value);
         onChange?.(e);
     };
 
-    const handleSend = () => {
-        const currentValue = value !== undefined ? value : inputValue;
-        if(!currentValue || currentValue.trim() === ""){
-            toast.error('Please enter your email', {
-                description: 'Email is required',
-            });
+
+    const handleSubmit = async(e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const form = e.currentTarget;
+        
+        if (!form) {
+            toast.error("Form not found");
             return;
         }
-        toast.success('Email sent successfully', {
-            description: 'I will get back to you as soon as possible',
-        });
-        onSend?.();
+        
+        const formData = new FormData(form);
+    
+        const response = await fetch(process.env.NEXT_PUBLIC_FORM_URL as string, {
+            method: "POST",
+            body: formData,
+            headers: { Accept: "application/json" },
+          });
+      
+          if (response.ok) {
+            toast.success("Email sent! ✅");
+            form.reset();
+          } else {
+            toast.error("Falied to submit email ❌");
+          }
     }
-
 
 
     return (
         
         <>
         <Toaster />
+        <form onSubmit={handleSubmit}>
         <div className="flex px-4 pt-5 flex-col max-w-lg w-full gap-2 min-w-0">
             <div className="relative">
                 <input 
@@ -37,17 +50,18 @@ export const Input = ({label, placeholder, type, value, onChange, onSend}: {labe
                     type={type} 
                     placeholder={placeholder} 
                     value={value !== undefined ? value : inputValue} 
-                    onChange={handleInputChange} 
+                    onChange={handleInputChange as unknown as React.ChangeEventHandler<HTMLInputElement>} 
                     className="border border-neutral-300 rounded-md p-2 pr-12 w-full text-sm md:text-base shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] focus:ring-1 focus:ring-secondary focus:outline-none" 
                 />
                 <button 
-                    onClick={handleSend}
+                    type="submit"
                     className="absolute right-2 top-1/2 transform -translate-y-1/2 shadow-[inset_1px_1px_23px_0px_#00000024] text-primary px-4 md:px-6 py-1 rounded text-xs md:text-sm hover:bg-neutral-300 cursor-pointer transition-colors duration-200"
                 >
                     Send
                 </button>
             </div>
         </div>
+        </form>
         </>
     )
 }
