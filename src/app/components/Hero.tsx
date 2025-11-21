@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { TextLoopCustomVariantsTransition } from "./ui/textLoop"
 
 export const Hero = () => {
     return(
@@ -10,7 +11,7 @@ export const Hero = () => {
         Full-stack web developer specialized in JavaScript, working with React, Node.js, MongoDB, Tailwind, and TypeScript. I thrive on solving problems and learning new technologies.
         </p>
         <span className="text-sm text-secondary md:text-sm mt-1 bg-neutral-100 py-1 px-2 rounded-lg inline-block">
-          Software Engineer
+          <TextLoopCustomVariantsTransition />
         </span>
         </div>
         </div>
