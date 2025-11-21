@@ -9,10 +9,6 @@ export const ProjectsHero = () => {
         <div className="max-w-6xl mx-auto min-w-0">
           <Title>Projects</Title>
           <Subtitle>
-            
-          I enjoy building projects that challenge my problem-solving skills and push me to write cleaner, smarter, and more efficient code every day.
-         
-          <br />
           
           Every project I build is a step forward in my coding journey, helping me explore new tools, frameworks, and creative ways to solve real-world problems.
           
