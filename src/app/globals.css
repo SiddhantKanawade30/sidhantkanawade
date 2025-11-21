@@ -24,6 +24,19 @@
   }
 }
 
+@keyframes scroll-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 1.5rem));
+  }
+}
+
+.animate-scroll-right {
+  animation: scroll-right var(--animation-duration, 30s) linear infinite;
+}
+
 /* Blog typography styling for Tailwind CSS v4 */
 .blog-content {
   max-width: 65ch;

@@ -1,6 +1,7 @@
 import { Container } from "./Container"
 import { Title } from "./ui/Title"
 import { Subtitle } from "./ui/Subtitle"
+import { TechStack } from "./TechStack"
 
 
 export const AboutHero = () => {
@@ -9,12 +10,12 @@ export const AboutHero = () => {
         <div className="max-w-6xl mx-auto min-w-0">
           <Title>About Me</Title>
           <Subtitle>
-            I am a 20 year old software engineer from India, fixing bugs I created.   
+           A 20 year old software engineer from India, fixing bugs I created.   
             <br />
             Open to freelance offers. Reach out to me to enquire more about my work and services.
           </Subtitle>
           
-          
+          <TechStack />
           
         </div>
       </Container>  
