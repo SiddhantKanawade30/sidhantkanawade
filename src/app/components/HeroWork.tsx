@@ -13,8 +13,8 @@ export const HeroWork = () => {
         {
             title: "Codence Studio",
             Role: "Frontend Developer",
-            date: "August 2025 - Present",
-            description: "Worked on multiple freelance projects and gained hands-on experience",
+            date: "July 2025 - November 2025",
+            description: "Worked on multiple projects as a frontend developer and have built polished products.",
             image: "/codence_studio.webp"
         },
         {

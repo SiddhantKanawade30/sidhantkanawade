@@ -12,6 +12,7 @@
   --color-quaternary : var(--color-neutral-100);
 }
 
+
 /* Dark mode removed - keeping only light theme */
 
 @theme inline {
@@ -144,8 +145,4 @@
   color: var(--color-neutral-600);
 }
 
-/* Smooth transitions */
-/* * {
-  transition: all 0.2s ease-in-out;
-} */
 

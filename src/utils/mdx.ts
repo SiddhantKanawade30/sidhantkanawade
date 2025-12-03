@@ -65,3 +65,11 @@ export const getBlogFrontmatter = async (slug:string) => {
     })
     return frontmatter
 }
+
+export const getAllBlogSlugs = async () => {
+    const files = await fs.readdir(path.join(process.cwd(), "src/data"));
+    return files
+      .filter((file) => file.endsWith(".mdx"))
+      .map((file) => file.replace(".mdx", ""));
+  };
+  

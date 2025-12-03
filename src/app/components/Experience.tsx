@@ -11,8 +11,8 @@ export const Experience = () => {
                     <WorkCard
                         image="/codence_studio.webp"
                         title="Frontend Developer"
-                        date="August 2025 - Present"
-                        description="Over the past two months, I've gained hands-on experience working on 4+ real-world projects, building responsive and user-friendly web applications using modern frontend technologies.<br/><br/>Throughout this journey, I've learned to write clean, efficient, and maintainable code while improving my skills in React, Next.js, Tailwind CSS, and other tools.<br/><br/>Making mistakes, iterating, and learning from them has helped me grow as a developer and develop a deeper understanding of UI/UX, performance optimization, and scalability."
+                        date="July 2025 - November 2025"
+                        description="In 4 months, I've gained hands-on experience working on real-world projects, building responsive and user-friendly web applications using modern frontend technologies.<br/><br/>Throughout this journey, I've learned to write clean, efficient, and maintainable code while improving my skills in React, Next.js, Tailwind CSS, and other tools.<br/><br/>Making mistakes, iterating, and learning from them has helped me grow as a developer and develop a deeper understanding of UI/UX, performance optimization, and scalability."
                     />
                     <br />
                     <WorkCard

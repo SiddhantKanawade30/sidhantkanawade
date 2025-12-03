@@ -1,7 +1,7 @@
 import { Container } from "@/app/components/Container";
 import { Metadata } from "next";
 import { redirect } from 'next/navigation'
-import { getBlogContent } from "@/utils/mdx";
+import { getBlogContent, getAllBlogSlugs } from "@/utils/mdx";
 
 interface BlogPageProps {
   params: Promise<{
@@ -9,7 +9,10 @@ interface BlogPageProps {
   }>
 }
 
-
+export async function generateStaticParams() {
+  const slugs = await getAllBlogSlugs();
+  return slugs.map((slug)=>({slug})) 
+}
 
 export async function generateMetadata({ params }: BlogPageProps): Promise<Metadata> {
   const { slug } = await params;
