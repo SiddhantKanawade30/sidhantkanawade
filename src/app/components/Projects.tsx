@@ -62,6 +62,7 @@ export const Projects = () => {
                                                     className="rounded-xl object-cover hover:scale-[1.01] transition duration-200 w-full h-full cursor-pointer"
                                                     width={400}
                                                     height={400}
+                                                    priority
                                                 />
                                             </Link>
                                         ) : (
@@ -71,6 +72,7 @@ export const Projects = () => {
                                                 className="rounded-xl object-cover w-full h-full opacity-75"
                                                 width={400}
                                                 height={400}
+                                                priority
                                             />
                                         )}
                                     </div>
