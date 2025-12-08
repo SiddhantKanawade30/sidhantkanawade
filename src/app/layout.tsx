@@ -46,7 +46,7 @@ export const metadata: Metadata = {
       "Explore my work, projects and professional portfolio built using Next.js. I have hands on experience in MERN stack, Prisma as ORM , Next.js, Tailwind css, shadcn, typescript",
     url: "https://siddhantkanawade.vercel.app",
     siteName: "Siddhant Portfolio",
-    images: "/profile.png",
+    images: "/opengraph-image.png",
     locale: "en_US",
     type: "website",
   },
