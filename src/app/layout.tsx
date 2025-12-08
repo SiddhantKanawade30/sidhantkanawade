@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: "Siddhant A Kanawade | Developer Portfolio",
     description:
       "Freelance MERN stack developer building production-grade systems.",
-    images: "/profile.png",
+    images: "/opengraph-image.png",
   },
 };
 
