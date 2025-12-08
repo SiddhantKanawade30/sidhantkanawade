@@ -37,7 +37,7 @@ export default async function SingleBlogPage({ params }: { params: Promise<{ slu
     return (
       <div className="overflow-x-auto">
         <Container className="min-h-screen p-4 md:p-6 md:pt-20 md:pb-10">
-            <article className="blog-content prose prose-sm md:prose-base max-w-none min-w-0">
+            <article className="blog-content prose prose-sm md:prose-base max-w-none min-w-3xl mx-auto">
              {content}
             </article>
         </Container>

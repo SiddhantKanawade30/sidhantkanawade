@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Siddhant A Kanawade — MERN Stack Developer & Freelancer",
     description:
-      "Explore my work, projects and professional portfolio built using Next.js, MERN stack, and modern UI. I have hands on experience in MERN stack, Prisma as ORM , Next.js, Tailwind css, shadcn, typescript",
+      "Explore my work, projects and professional portfolio built using Next.js. I have hands on experience in MERN stack, Prisma as ORM , Next.js, Tailwind css, shadcn, typescript",
     url: "https://siddhantkanawade.vercel.app",
     siteName: "Siddhant Portfolio",
     images: "/profile.png",

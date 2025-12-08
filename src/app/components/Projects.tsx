@@ -4,9 +4,9 @@ import Image from "next/image"
 import Link from "next/link"
 import { Container } from "./Container"
 import { Badge } from "./ui/Badge"
-import Blogito from "/public/Blogito.png"
-import Phantom from "/public/phantom.svg"
-import SecureVault from "/public/securevault.jpg"
+import Blogito from "@public/Blogito.png"
+import Phantom from "@public/phantom.svg"
+import SecureVault from "@public/securevault.jpg"
 
 
 

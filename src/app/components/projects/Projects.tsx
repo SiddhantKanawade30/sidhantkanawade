@@ -1,9 +1,9 @@
 import { Container } from "../Container"
 import Image from "next/image"
 import Link from "next/link"
-import Blogito from "/public/Blogito.png"
-import SecureVault from "/public/securevault.jpg"
-import Phantom from "/public/phantom.svg"
+import Blogito from "@public/Blogito.png"
+import SecureVault from "@public/securevault.jpg"
+import Phantom from "@public/phantom.svg"
 
 
 export const Projects = () => {
