@@ -8,7 +8,7 @@ export const HeroContact = () => {
         <Badge>Let&apos;s connect</Badge>    
         
         </div>
-        <div className="px-4 text-secondary text-sm md:text-base max-w-lg leading-relaxed">I am Currently looking for new opportunities. If you have any query or want to work together, just drop your mail !</div>
+        <div className="px-6 text-secondary text-sm md:text-base max-w-lg leading-relaxed">I am Currently looking for new opportunities. If you have any query or want to work together, just drop your mail !</div>
         <div className="px-4 mt-4">
         <Input label="Email" placeholder="Email" type="email"  />
         </div>

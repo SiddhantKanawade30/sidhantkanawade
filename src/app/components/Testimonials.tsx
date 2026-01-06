@@ -8,7 +8,7 @@ import { HeroContact } from "./HeroContact";
 export function Testimonials() {
   return (
     <div className="overflow-x-auto pb-30 md:pb-0">
-        <div className="px-4 py-5">
+        {/* <div className="px-4 py-5">
         <Badge>User Feedbacks</Badge>
         </div>
     <div className="rounded-md flex flex-col antialiased bg-white items-center justify-center relative overflow-hidden min-w-0">
@@ -18,7 +18,7 @@ export function Testimonials() {
         direction="right"
         speed="slow"
       />
-    </div>
+    </div> */}
 
      <HeroContact />
     </div>
