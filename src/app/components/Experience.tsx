@@ -12,7 +12,8 @@ export const Experience = () => {
                         image="/codence_studio.webp"
                         title="Frontend Developer"
                         date="July 2025 - November 2025"
-                        description="In 4 months, I've gained hands-on experience working on real-world projects, building responsive and user-friendly web applications using modern frontend technologies.<br/><br/>Throughout this journey, I've learned to write clean, efficient, and maintainable code while improving my skills in React, Next.js, Tailwind CSS, and other tools.<br/><br/>Making mistakes, iterating, and learning from them has helped me grow as a developer and develop a deeper understanding of UI/UX, performance optimization, and scalability."
+                        description="Focused on frontend development using Next.js and React with TypeScript, delivering 4+ responsive web applications with clean, maintainable code.<br/><br/>Built reusable components and responsive UIs using Tailwind CSS and shadcn/ui, integrated REST APIs via Postman, and collaborated on backend integration with Node.js and MongoDB.<br/><br/>Gained hands-on experience in performance optimization, UI/UX best practices, and modern development workflows while contributing to real-world projects."
+                        techStack={["/nextjs.svg", "/react.svg", "/typescript.svg", "/tailwind.svg", "/shadcn.svg", "/node.svg", "/mongo.svg"]}
                     />
                     <br />
                     <WorkCard

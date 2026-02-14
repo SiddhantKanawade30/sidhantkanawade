@@ -5,10 +5,9 @@ import Link from "next/link"
 import { Container } from "./Container"
 import { Badge } from "./ui/Badge"
 import Blogito from "@public/Blogito.png"
-import Phantom from "@public/phantom.svg"
+import TestimonialsLo from "@public/testimonialslo.png"
 import SecureVault from "@public/securevault.jpg"
-
-
+import GithubIcon from "@public/github-icon.svg"
 
 
 export const Projects = () => {
@@ -18,20 +17,22 @@ export const Projects = () => {
             title: "Blogito",
             src: Blogito,
             description: "A blog website to share experiences and learnings. Built with React, Tailwind CSS and javascript.",
-            href: "https://blogito.vercel.app/"
+            href: "https://blogito.vercel.app/",
+            github: "https://github.com/SiddhantKanawade30/blogito-backend"
         },
         {
             title: "Secure Vault",
             src: SecureVault,
             description: "A secure password manager using cryptography, helping users store and manage their passwords securely.",
-            href: "https://secure-vault-delta.vercel.app/"
+            href: "https://secure-vault-delta.vercel.app/",
+            github: "https://github.com/SiddhantKanawade30/SecureVault"
         },
-        
         {
-            title: "Phantom Chat (In Progress)",
-            src: Phantom,
-            description: "A secure chat app using Double Ratchet Algorithm and X3DH key exchange, ensuring perfect forward secrecy.",
-            href: ""
+            title: "TestimonialsLo",
+            src: TestimonialsLo,
+            description: "A platform that helps businesses, freelancers, startups gather and manage customer video, text testimonials efficiently.",
+            href: "https://testimonialslo.siddhantkanawade.in",
+            github: "https://github.com/SiddhantKanawade30/testimonialslo-backend"
         }
     ]
 
@@ -77,9 +78,16 @@ export const Projects = () => {
                                         )}
                                     </div>
 
-                                    <h2 className="text-tertiary text-lg font-bold mt-2 pl-2 tracking-tight">
-                                        {project.title}
-                                    </h2>
+                                    <div className="flex items-center justify-between pr-2">
+                                        <h2 className="text-tertiary text-lg font-bold mt-2 pl-2 tracking-tight">
+                                            {project.title}
+                                        </h2>
+                                        {project.github && (
+                                            <Link href={project.github} target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-primary transition-colors">
+                                                <Image src={GithubIcon} alt="GitHub" width={20} height={20} className="w-5 h-5" />
+                                            </Link>
+                                        )}
+                                    </div>
                                     <p className="text-secondary text-sm pt-2 pb-5 pl-2 tracking-tight leading-relaxed">
                                         {project.description}
                                     </p>
