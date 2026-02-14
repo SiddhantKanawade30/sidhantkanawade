@@ -21,9 +21,9 @@ const inter = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://siddhantkanawade.vercel.app"),
+  metadataBase: new URL("https://siddhantkanawade.in"),
   alternates: {
-    canonical: "https://siddhantkanawade.vercel.app",
+    canonical: "https://siddhantkanawade.in",
   },
   title: "Siddhant A Kanawade | Full-Stack Developer & Freelancer",
   description:
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "Siddhant A Kanawade — MERN Stack Developer & Freelancer",
     description:
       "Explore my work, projects and professional portfolio built using Next.js. I have hands on experience in MERN stack, Prisma as ORM , Next.js, Tailwind css, shadcn, typescript",
-    url: "https://siddhantkanawade.vercel.app",
+    url: "https://siddhantkanawade.in",
     siteName: "Siddhant Portfolio",
     images: "/opengraph-image.png",
     locale: "en_US",

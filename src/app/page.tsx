@@ -13,7 +13,6 @@ export default function Home() {
       
       <Container className="px-0 py-4 md:pt-25 md:pb-10 min-w-0">
         <Hero />
-       
         <Projects />
         <LandingBlogs />
         <HeroWork />
