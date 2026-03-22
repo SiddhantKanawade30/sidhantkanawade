@@ -127,7 +127,7 @@ export const Navbar = () => {
                     </Link>
                     
                     {/* Theme Toggle */}
-                    <button
+                    {/* <button
                         onClick={toggleTheme}
                         className="p-2 rounded-md hover:bg-neutral-100 transition-colors duration-200"
                         aria-label="Toggle theme"
@@ -137,7 +137,7 @@ export const Navbar = () => {
                         ) : (
                             <Moon size={18} className="text-secondary" />
                         )}
-                    </button>
+                    </button> */}
                 </div>
 
                 {/* Hamburger Menu Button */}
