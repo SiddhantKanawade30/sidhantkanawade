@@ -37,9 +37,20 @@ export default async function SingleBlogPage({ params }: { params: Promise<{ slu
     return (
       <div className="overflow-x-auto">
         <Container className="min-h-screen p-4 md:p-6 md:pt-20 md:pb-10">
-            <article className="blog-content prose prose-sm md:prose-base max-w-none min-w-3xl mx-auto">
+          {/* Blog Image */}
+          {blog.frontmatter.image && (
+            <div className="mb-6">
+              <img 
+                src={blog.frontmatter.image} 
+                alt={blog.frontmatter.title}
+                className="w-full h-64 md:h-96 object-cover rounded-lg"
+              />
+            </div>
+          )}
+          
+          <article className="blog-content prose prose-sm md:prose-base max-w-none min-w-0 mx-auto lg:min-w-3xl">
              {content}
-            </article>
+          </article>
         </Container>
       </div>
     );

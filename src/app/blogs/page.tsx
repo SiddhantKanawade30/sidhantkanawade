@@ -43,7 +43,7 @@ export default async function BlogsPage() {
             <p className="text-secondary text-sm md:text-base">I&apos;m working on some great content. Check back soon!</p>
           </div>
         ) : (
-          <div className="space-y-4 md:space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {allBlogs.map((blog) => (
               <Link 
                 href={`/blogs/${blog.slug}`} 
@@ -51,29 +51,37 @@ export default async function BlogsPage() {
                 className="block group"
               >
                 <article className="bg-white rounded-lg border border-gray-200 p-4 md:p-6 hover:shadow-md transition-all duration-200">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 md:gap-4">
-                    {/* Left Side - Title and Description */}
-                    <div className="flex-1 min-w-0">
-                      <h2 className="text-lg md:text-xl font-bold text-primary mb-2 md:mb-3 group-hover:text-tertiary transition-colors line-clamp-2 leading-tight">
-                        {blog.title}
-                      </h2>
-                      
-                      {blog.description && (
-                        <p className="text-secondary text-sm leading-relaxed line-clamp-2 md:line-clamp-3">
-                          {blog.description}
-                        </p>
-                      )}
+                  {/* Blog Image */}
+                  {blog.image && (
+                    <div className="mb-4">
+                      <img 
+                        src={blog.image} 
+                        alt={blog.title}
+                        className="w-full h-48 object-cover rounded-lg"
+                      />
                     </div>
-                    
-                    {/* Right Side - Date */}
-                    <div className="md:text-right md:min-w-[120px]">
-                      {blog.date && (
-                        <span className="text-xs md:text-sm text-secondary font-medium">
-                          {new Date(blog.date).toLocaleDateString("en-US", dateOptions)}
-                        </span>
-                      )}
+                  )}
+                  
+                  {/* Title */}
+                  <h2 className="text-lg md:text-xl font-bold text-primary group-hover:text-tertiary transition-colors line-clamp-2 leading-tight mb-3">
+                    {blog.title}
+                  </h2>
+                  
+                  {/* Description */}
+                  {blog.description && (
+                    <p className="text-secondary text-sm leading-relaxed line-clamp-3 mb-4">
+                      {blog.description}
+                    </p>
+                  )}
+                  
+                  {/* Date */}
+                  {blog.date && (
+                    <div className="flex justify-start md:justify-start">
+                      <span className="text-xs md:text-sm text-secondary font-medium">
+                        {new Date(blog.date).toLocaleDateString("en-US", dateOptions)}
+                      </span>
                     </div>
-                  </div>
+                  )}
                 </article>
               </Link>
             ))}
