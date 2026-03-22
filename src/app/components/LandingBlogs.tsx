@@ -47,7 +47,7 @@ export const LandingBlogs = async () => {
                       </h2>
                       
                       {blog.description && (
-                        <p className="text-secondary text-sm leading-relaxed line-clamp-2 md:line-clamp-3">
+                        <p className="text-secondary text-sm leading-relaxed line-clamp-2">
                           {blog.description}
                         </p>
                       )}

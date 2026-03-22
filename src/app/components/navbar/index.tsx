@@ -3,18 +3,20 @@ import { Link } from 'next-view-transitions'
 import { Container } from "../Container"
 import { motion, useMotionValueEvent, useScroll, useTransform } from "framer-motion"
 import { useState } from "react"
+import { Sun, Moon } from "lucide-react"
 
 export const Navbar = () => {
     const [hovered, setHovered] = useState<number | null>(null)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
-    const { scrollY } = useScroll()
     const [scrolled, setScrolled] = useState<boolean>(false)
+    const [isDarkMode, setIsDarkMode] = useState(false)
 
+    const { scrollY } = useScroll()
     const y = useTransform(scrollY, [0, 100], [0, 10])
     const width = useTransform(scrollY, [0, 100], ["100%", "55%"])
 
     useMotionValueEvent(scrollY, "change", (latest) => {
-        if (latest > 20) {
+        if (typeof latest === 'number' && latest > 100) {
             setScrolled(true)
         } else {
             setScrolled(false)
@@ -23,16 +25,16 @@ export const Navbar = () => {
 
     const navItems = [
         {
+            label: "Home",
+            href: "/"
+        },
+        {
             label: "About",
             href: "/about"
         },
         {
             label: "Projects", 
             href: "/projects"
-        },
-        {
-            label: "Contact",
-            href: "/contact"
         },
         {
             label: "Blogs",
@@ -46,6 +48,12 @@ export const Navbar = () => {
 
     const closeMenu = () => {
         setIsMenuOpen(false)
+    }
+
+    const toggleTheme = () => {
+        setIsDarkMode(!isDarkMode)
+        // Here you can implement the actual theme switching logic
+        // For example: document.documentElement.classList.toggle('dark')
     }
 
     return (
@@ -63,12 +71,8 @@ export const Navbar = () => {
                 }}
                 className="hidden  md:flex items-center  justify-between px-4 lg:px-6 py-2 fixed inset-x-0 mx-auto top-0 max-w-4xl z-50 rounded-full bg-white/70 backdrop-blur-sm"
             >
-                <Link href="/">
-                    <div className="hover:bg-neutral-100 px-3 py-2 rounded-md transition-colors duration-200">
-                        Home
-                    </div>
-                </Link>
                 <div className="flex items-center space-x-1">
+                    
                     {navItems.map((item, idx) => (
                         <Link
                             href={item.href}
@@ -88,6 +92,19 @@ export const Navbar = () => {
                         </Link>
                     ))}
                 </div>
+                
+                {/* Theme Toggle */}
+                <button
+                    onClick={toggleTheme}
+                    className="p-2 rounded-md hover:bg-neutral-100 transition-colors duration-200"
+                    aria-label="Toggle theme"
+                >
+                    {isDarkMode ? (
+                        <Sun size={18} className="text-secondary" />
+                    ) : (
+                        <Moon size={18} className="text-secondary" />
+                    )}
+                </button>
             </motion.nav>
 
             {/* Mobile Navbar */}
@@ -102,11 +119,26 @@ export const Navbar = () => {
                 }}
                 className="md:hidden rounded-lg flex items-center justify-between px-4 py-2 fixed inset-x-0 mx-auto top-0 max-w-full z-50 bg-white"
             >
-                <Link href="/" onClick={closeMenu}>
-                    <div className="hover:bg-neutral-100 px-3 py-2 rounded-md transition-colors duration-200 font-medium">
-                        Home
-                    </div>
-                </Link>
+                <div className="flex items-center space-x-2">
+                    <Link href="/" onClick={closeMenu}>
+                        <div className="hover:bg-neutral-100 px-3 py-2 rounded-md transition-colors duration-200 font-medium">
+                            Home
+                        </div>
+                    </Link>
+                    
+                    {/* Theme Toggle */}
+                    <button
+                        onClick={toggleTheme}
+                        className="p-2 rounded-md hover:bg-neutral-100 transition-colors duration-200"
+                        aria-label="Toggle theme"
+                    >
+                        {isDarkMode ? (
+                            <Sun size={18} className="text-secondary" />
+                        ) : (
+                            <Moon size={18} className="text-secondary" />
+                        )}
+                    </button>
+                </div>
 
                 {/* Hamburger Menu Button */}
                 <button

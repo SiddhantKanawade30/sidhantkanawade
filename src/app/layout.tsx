@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   title: "Siddhant A Kanawade | Full-Stack Developer & Freelancer",
   description:
-    "Professional portfolio of Siddhant A Kanawade — Full-Stack MERN developer, freelance software engineer, and creator of real-time encrypted chat apps, MERN projects, and UI/UX experiences.",
+    "Professional portfolio of Siddhant A Kanawade — Full-Stack developer, freelance software engineer",
   keywords: [
     "Siddhant A Kanawade",
     "Full Stack Developer",
@@ -37,7 +37,8 @@ export const metadata: Metadata = {
     "Portfolio",
     "Next.js",
     "Kanawade Siddhant",
-    "Projects"
+    "Projects",
+    "Siddhant"
   ],
   authors: [{ name: "Siddhant A Kanawade" }],
   openGraph: {
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     description:
       "Explore my work, projects and professional portfolio built using Next.js. I have hands on experience in MERN stack, Prisma as ORM , Next.js, Tailwind css, shadcn, typescript",
     url: "https://siddhantkanawade.in",
-    siteName: "Siddhant Portfolio",
+    siteName: "Siddhant's Portfolio",
     images: "/opengraph-image.png",
     locale: "en_US",
     type: "website",
@@ -68,7 +69,6 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="en">
-        
         <body
           className={`${inter.className} antialiased bg-neutral-100 overflow-x-auto`}
         >
