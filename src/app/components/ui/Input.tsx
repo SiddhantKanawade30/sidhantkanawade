@@ -19,6 +19,9 @@ export const Input = ({label, placeholder, type, value, onChange}: {label: strin
             toast.error("Form not found");
             return;
         }
+
+        const audio = new Audio("/click.mp3");
+        audio.play();
         
         const formData = new FormData(form);
     
