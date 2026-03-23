@@ -4,6 +4,7 @@ import { Container } from "../Container"
 import { motion, useMotionValueEvent, useScroll, useTransform } from "framer-motion"
 import { useState } from "react"
 import { Sun, Moon } from "lucide-react"
+import { playClickSound } from "@/utils/sound"
 
 export const Navbar = () => {
     const [hovered, setHovered] = useState<number | null>(null)
@@ -80,6 +81,7 @@ export const Navbar = () => {
                             className="relative px-3 py-2 text-sm hover:text-primary transition-colors duration-200"
                             onMouseEnter={() => setHovered(idx)}
                             onMouseLeave={() => setHovered(null)}
+                            onClick={() => playClickSound()}
                         >
                             {hovered === idx && (
                                 <motion.span
@@ -120,7 +122,7 @@ export const Navbar = () => {
                 className="md:hidden rounded-lg flex items-center justify-between px-4 py-2 fixed inset-x-0 mx-auto top-0 max-w-full z-50 bg-white"
             >
                 <div className="flex items-center space-x-2">
-                    <Link href="/" onClick={closeMenu}>
+                    <Link href="/" onClick={() => { closeMenu(); playClickSound(); }}>
                         <div className="hover:bg-neutral-100 px-3 py-2 rounded-md transition-colors duration-200 font-medium">
                             Home
                         </div>
@@ -189,7 +191,7 @@ export const Navbar = () => {
                             href={item.href}
                             key={idx}
                             className="block px-4 py-3 text-sm hover:bg-neutral-100 transition-colors duration-200 border-b border-neutral-100 last:border-b-0"
-                            onClick={closeMenu}
+                            onClick={() => { closeMenu(); playClickSound(); }}
                         >
                             {item.label}
                         </Link>
