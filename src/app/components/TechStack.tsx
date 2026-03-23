@@ -89,7 +89,7 @@ export const TechStack = () => {
         {techStack.map((tech, index) => (
           <div
             key={`tech-${index}`}
-            className="flex items-center gap-2 bg-neutral-100  px-3 py-1 rounded-md shrink-0"
+            className="flex items-center gap-2 border border-gray-200 shadow-[inset_0px_3px_8px_0px_#00000014]  px-3 py-1 rounded-md shrink-0"
           >
             <Image
               src={tech.icon!}

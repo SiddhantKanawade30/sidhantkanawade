@@ -50,7 +50,7 @@ export default async function BlogsPage() {
                 key={blog.slug} 
                 className="block group"
               >
-                <article className="bg-white rounded-lg border border-gray-200 p-4 md:p-6 hover:shadow-md transition-all duration-200">
+                <article className="bg-white rounded-lg border border-gray-200 shadow-[inset_0px_3px_8px_0px_#00000014] p-4 md:p-6 transition-all duration-200">
                   {/* Blog Image */}
                   {blog.image && (
                     <div className="mb-4">
@@ -69,7 +69,7 @@ export default async function BlogsPage() {
                   
                   {/* Description */}
                   {blog.description && (
-                    <p className="text-secondary text-sm leading-relaxed line-clamp-3 mb-4">
+                    <p className="text-secondary text-sm leading-relaxed line-clamp-2 mb-4">
                       {blog.description}
                     </p>
                   )}

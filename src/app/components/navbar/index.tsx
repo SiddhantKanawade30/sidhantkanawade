@@ -69,7 +69,7 @@ export const Navbar = () => {
                     duration: 0.3,
                     ease: "easeInOut",
                 }}
-                className="hidden  md:flex items-center  justify-between px-4 lg:px-6 py-2 fixed inset-x-0 mx-auto top-0 max-w-4xl z-50 rounded-full bg-white/70 backdrop-blur-sm"
+                className="hidden md:flex items-center text-secondary justify-between px-4 lg:px-6 py-2 fixed inset-x-0 mx-auto top-0 max-w-4xl z-50 rounded-full bg-white/70 backdrop-blur-sm"
             >
                 <div className="flex items-center space-x-1">
                     
@@ -77,7 +77,7 @@ export const Navbar = () => {
                         <Link
                             href={item.href}
                             key={idx}
-                            className="relative px-3 py-2 text-sm transition-colors duration-200"
+                            className="relative px-3 py-2 text-sm hover:text-primary transition-colors duration-200"
                             onMouseEnter={() => setHovered(idx)}
                             onMouseLeave={() => setHovered(null)}
                         >
