@@ -47,7 +47,15 @@ export const metadata: Metadata = {
       "Explore my work, projects and professional portfolio built using Next.js. I have hands on experience in MERN stack, Prisma as ORM , Next.js, Tailwind css, shadcn, typescript",
     url: "https://siddhantkanawade.in",
     siteName: "Siddhant's Portfolio",
-    images: "/opengraph-image.webp",
+    images: [
+      {
+        url: "https://siddhantkanawade.in/opengraph-image.webp",
+        width: 1200,
+        height: 630,
+        alt: "Siddhant A Kanawade Portfolio",
+        type: "image/webp"
+      }
+    ],
     locale: "en_US",
     type: "website",
   },
@@ -56,7 +64,7 @@ export const metadata: Metadata = {
     title: "Siddhant A Kanawade | Developer Portfolio",
     description:
       "Freelance MERN stack developer building production-grade systems.",
-    images: "/opengraph-image.webp",
+    images: "https://siddhantkanawade.in/opengraph-image.webp",
   },
 };
 
