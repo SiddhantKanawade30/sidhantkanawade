@@ -1,6 +1,7 @@
 import { Container } from "../Container"
 import { Twitter ,Linkedin , Github , Mail } from 'lucide-react';
 import Link from "next/link";   
+import UmamiAnalytics from "../umamiAnalytics";   
 
 export const Footer = () => {
 
@@ -30,6 +31,7 @@ const links = [
                 <div className="cursor-pointer text-xs md:text-sm text-center sm:text-left">
                     Built with love by Siddhant A Kanawade
                 </div>
+                <UmamiAnalytics />
                 <div className="flex gap-4 text-secondary">
                     {links.map((link) => (
                         <Link href={link.href} key={link.href} target="_blank">

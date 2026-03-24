@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "./components/navbar";
 import { ViewTransitions } from 'next-view-transitions'
 import { Footer } from "./components/navbar/footer";
+import UmamiAnalytics from "./components/umamiAnalytics";
 
 const inter = localFont({
   src: [
@@ -87,6 +88,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
+          <UmamiAnalytics />
         </body>
       </html>
     </ViewTransitions>
