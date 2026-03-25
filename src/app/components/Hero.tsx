@@ -8,7 +8,7 @@ export const Hero = () => {
     
     <div className="flex flex-col md:flex-row md:pb-7 pt-15 md:pt-0 p-4 overflow-x-auto items-center md:items-start">
       <div className="md:pl-3 min-w-0 text-center md:text-left">
-        <div className="flex">
+        <div className="flex flex-col md:flex-row items-center md:items-start">
           <Image
         src="/profile.webp"
         alt="Avatar"

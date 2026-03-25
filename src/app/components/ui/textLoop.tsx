@@ -2,7 +2,7 @@ import { TextLoop } from './text-loop';
 
 export function TextLoopCustomVariantsTransition() {
   return (
-    <p className='inline-flex whitespace-pre-wrap text-sm'>
+    <div className='inline-flex whitespace-pre-wrap text-sm'>
        {' '}
       <TextLoop
         className='overflow-y-clip'
@@ -38,6 +38,6 @@ export function TextLoopCustomVariantsTransition() {
         <span>I Build Websites</span>
         <span>Problem Solver</span>
       </TextLoop>
-    </p>
+    </div>
   );
 }
