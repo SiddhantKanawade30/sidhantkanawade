@@ -22,6 +22,11 @@ export default async function BlogsPage() {
     day: 'numeric' 
   };
 
+  const sortedBlogs = allBlogs.sort((a, b) => 
+    new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+
+
   return (
     <div className="min-h-screen flex items-start justify-start overflow-x-auto">
       <Container className="min-h-screen p-4 pt-14 md:p-6 md:pt-20 md:pb-16">
@@ -36,7 +41,7 @@ export default async function BlogsPage() {
         </div>
 
         {/* Blog List */}
-        {allBlogs.length === 0 ? (
+        {sortedBlogs.length === 0 ? (
           <div className="text-center py-8 md:py-16">
             <div className="text-4xl md:text-6xl mb-4">📝</div>
             <h3 className="text-xl md:text-2xl font-semibold text-primary mb-2">No posts yet</h3>
@@ -50,7 +55,7 @@ export default async function BlogsPage() {
                 key={blog.slug} 
                 className="block group"
               >
-                <article className="bg-white rounded-lg border border-gray-200 shadow-[inset_0px_3px_8px_0px_#00000014] p-4 md:p-6 transition-all duration-200">
+                <article className="bg-white rounded-lg border shadow-siddhant border-gray-100 p-4 transition-all duration-200">
                   {/* Blog Image */}
                   {blog.image && (
                     <div className="mb-4">

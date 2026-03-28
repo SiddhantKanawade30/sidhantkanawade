@@ -1,0 +1,116 @@
+---
+title: "Next.js Rendering Strategies: Optimizing for Web Vitals"
+description: "A deep dive into SSR, SSG, ISR, and CSR in Next.js and how choosing the right strategy directly impacts FCP, LCP, and TTFB."
+image: "/images/blog/NextJS-Rendering-Strategies.webp"
+date: "2026-03-28"
+---
+
+# **Next.js Rendering Strategies: Optimizing for Web Vitals**
+
+In modern web development, performance is about how and when you deliver code. Next.js allows you to switch between different strategies on a per-page basis, directly impacting **Web Vitals** like **FCP**, **LCP**, and **TTFB**.
+
+---
+
+## **1. Static Site Generation (SSG)**
+
+In SSG, HTML is generated at **build time** and served via a Global CDN.
+
+* **When to use:**
+  * Landing pages
+  * Documentation Portals
+  * Marketing pages
+  * Content that does not change frequently
+
+* **How it helps performance:**
+  * **No server computation** at request time results in extremely low **TTFB**.
+  * Provides the best possible scores for **FCP** and **LCP**.
+
+---
+
+## **2. Incremental Static Regeneration (ISR)**
+
+ISR allows you to rebuild or update static content at a fixed interval without a full site rebuild.
+
+```javascript
+// Example: App Router - Regenerate the page every 60 seconds
+export const revalidate = 60
+```
+
+* **When to use:**
+  * Blogs
+  * Product pages
+  * Content-driven applications
+
+* **Why it helps performance:**
+  * Keeps pages static for the majority of requests.
+  * Avoids full rebuilds while maintaining a strong **LCP**.
+  * Keeps refreshing data.
+
+---
+
+## **3. Server-Side Rendering (SSR)**
+
+SSR generates HTML on the server for every request, ensuring users see real-time, personalized content.
+
+```javascript
+// Example: Generating HTML on every request (App Router)
+export default async function Page() {
+  const res = await fetch('https://api.example.com/data', { cache: 'no-store' })
+  const data = await res.json()
+
+  return (
+    <main>
+      <h1>Dynamic Data</h1>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+    </main>
+  )
+}
+```
+
+* **When to use:**
+  * SEO-critical pages with highly dynamic data
+  * Pages requiring request-time personalization
+
+* **Trade-offs:**
+  * Increased server load
+  * Higher **TTFB** because the browser waits for the backend to render
+
+---
+
+## **4. Client-Side Rendering (CSR)**
+
+CSR renders content entirely in the browser. This is the default behavior for standard React apps.
+
+```javascript
+"use client"
+
+import { useEffect, useState } from 'react'
+
+export default function Dashboard() {
+  const [data, setData] = useState(null)
+
+  useEffect(() => {
+    fetch('/api/user')
+      .then((res) => res.json())
+      .then(setData)
+  }, [])
+
+  if (!data) return <p>Loading...</p>
+
+  return <div>Welcome, {data.name}</div>
+}
+```
+
+* **When to use:**
+  * Private dashboards and internal tools
+  * Authenticated areas where SEO isn't a priority
+
+* **Downsides:**
+  * Poor **FCP**/**LCP** if content waits for JavaScript
+  * Higher hydration costs because the page is initially empty
+
+---
+
+## **Conclusion**
+
+There is no single best strategy. Use **SSG/ISR** for speed and SEO, and reserve **SSR/CSR** for highly dynamic or private data. Choose wisely to keep your Web Vitals in the green.
