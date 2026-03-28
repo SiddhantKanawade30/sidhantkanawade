@@ -16,9 +16,60 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: BlogPageProps): Promise<Metadata> {
   const { slug } = await params;
+  const blog = await getBlogContent(slug);
+  
+  if (!blog) {
+    return {
+      title: "Blog Not Found - Siddhant Kanawade",
+      description: "The requested blog post could not be found.",
+    };
+  }
+
+  const { frontmatter } = blog;
+  const baseUrl = "https://siddhantkanawade.in";
+  const blogUrl = `${baseUrl}/blogs/${slug}`;
+
   return {
-    title: `${slug} - Siddhant Kanawade`,
-    description: `Blog post about ${slug}`,
+    title: `${frontmatter.title} - Siddhant Kanawade`,
+    description: frontmatter.description,
+    openGraph: {
+      title: frontmatter.title,
+      description: frontmatter.description,
+      url: blogUrl,
+      siteName: "Siddhant's Portfolio",
+      images: frontmatter.image ? [
+        {
+          url: frontmatter.image.startsWith('http') ? frontmatter.image : `${baseUrl}${frontmatter.image}`,
+          width: 1200,
+          height: 630,
+          alt: frontmatter.title,
+          type: 'image/webp',
+        }
+      ] : [
+        {
+          url: `${baseUrl}/opengraph-image.webp`,
+          width: 1200,
+          height: 630,
+          alt: "Siddhant A Kanawade Portfolio",
+          type: 'image/webp',
+        }
+      ],
+      locale: 'en_US',
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: frontmatter.title,
+      description: frontmatter.description,
+      images: frontmatter.image ? [
+        frontmatter.image.startsWith('http') ? frontmatter.image : `${baseUrl}${frontmatter.image}`
+      ] : [
+        `${baseUrl}/opengraph-image.webp`
+      ],
+    },
+    alternates: {
+      canonical: blogUrl,
+    },
   };
 }
 
