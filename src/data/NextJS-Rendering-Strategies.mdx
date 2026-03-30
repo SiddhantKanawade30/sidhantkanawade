@@ -9,6 +9,28 @@ date: "2026-03-28"
 
 In modern web development, performance is about how and when you deliver code. Next.js allows you to switch between different strategies on a per-page basis, directly impacting **Web Vitals** like **FCP**, **LCP**, and **TTFB**.
 
+If those abbreviations are new, here’s a quick breakdown before we dive into each rendering mode:
+
+### **What these metrics mean**
+
+1. **TTFB (Time to First Byte)**
+   * Measures the time between the browser requesting the page and the arrival of the first byte from the server.
+   * Analogy: How long it takes for the waiter to bring your first glass of water after you sit down.
+   * Why it matters: If the server is slow to process the request (for example, a complex SSR fetch), the browser is waiting and nothing can render yet.
+   * Good score: under 0.8 seconds.
+
+2. **FCP (First Contentful Paint)**
+   * Measures how long it takes for the first piece of content to appear on the screen.
+   * Analogy: When the waiter brings out the breadbasket. You don’t have your meal yet, but you know something is happening.
+   * Why it matters: It gives perceived performance — the user knows the page is loading.
+   * Good score: under 1.8 seconds.
+
+3. **LCP (Largest Contentful Paint)**
+   * Measures how long it takes for the largest visible element in the viewport to finish rendering.
+   * Analogy: When your main course arrives. This is what the user came for.
+   * Why it matters: It’s the most user-centric metric and marks when the page feels useful.
+   * Good score: under 2.5 seconds.
+
 ---
 
 ## **1. Static Site Generation (SSG)**
@@ -114,3 +136,11 @@ export default function Dashboard() {
 ## **Conclusion**
 
 There is no single best strategy. Use **SSG/ISR** for speed and SEO, and reserve **SSR/CSR** for highly dynamic or private data. Choose wisely to keep your Web Vitals in the green.
+
+---
+
+## **Rendering Strategy Summary**
+
+![Rendering Strategy Summary](/images/blog/table.png)
+
+*TTFB is fast for the shell, but slow for the actual content.*
