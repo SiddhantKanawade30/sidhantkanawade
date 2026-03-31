@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Siddhant A Kanawade" }],
   openGraph: {
-    title: "Siddhant A Kanawade — MERN Stack Developer & Freelancer",
+    title: "Siddhant A Kanawade — Full-Stack Developer & Freelancer",
     description:
       "Explore my work, projects and professional portfolio built using Next.js. I have hands on experience in MERN stack, Prisma as ORM , Next.js, Tailwind css, shadcn, typescript",
     url: "https://siddhantkanawade.in",
@@ -65,7 +65,8 @@ export const metadata: Metadata = {
     title: "Siddhant A Kanawade | Developer Portfolio",
     description:
       "Freelance MERN stack developer building production-grade systems.",
-    images: "https://siddhantkanawade.in/opengraph-image.webp",
+    images: ["https://siddhantkanawade.in/opengraph-image.webp"],
+    creator: "@SiddKanawade30",
   },
 };
 
