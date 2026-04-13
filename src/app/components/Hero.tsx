@@ -44,7 +44,7 @@ export const Hero = () => {
             <Github size={20} />
           </Link>
           <Link 
-            href="/Resume_Siddhant_Kanawade.pdf" 
+            href="/Siddhant_Kanawade_Resume.pdf" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-secondary hover:text-primary transition-colors p-2 rounded-lg shadow-[inset_0px_3px_8px_0px_#00000024] hover:bg-neutral-100"
